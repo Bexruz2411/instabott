@@ -7,7 +7,7 @@ from aiogram.dispatcher.filters import Text
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
     await message.answer(f"Здравствуйте, {message.from_user.full_name}!\n"
-                         f"Отправьте ссылку на видео или фото в Instagram.\n \n Мы не просим чтобы вы обязательно подписались на канал, если хотите как-то поддержать админа подпишитесь пожалуйста https://t.me/FilmPrimiere
+                         f"Отправьте ссылку на видео или фото в Instagram.\nМы не просим чтобы вы обязательно подписались на канал, если хотите как-то поддержать админа подпишитесь пожалуйста https://t.me/FilmPrimiere
 ")
 @dp.message_handler(Text(startswith='https://www.instagram.com'))
 async def test(message: types.Message):
